@@ -63,7 +63,7 @@ h1 {
 
 .yes-cat {
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
   width: 100px;
   transform: translate(-50%, -50%);
@@ -107,9 +107,9 @@ h1 {
 
 @keyframes catSpinGrow {
   from {
-    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    transform: translate(-50%, -40%) scale(0) rotate(0deg);
   }
   to {
-    transform: translate(-50%, -50%) scale(3) rotate(720deg);
+    transform: translate(-50%, -40%) scale(3) rotate(720deg);
   }
 }
