@@ -71,7 +71,6 @@ async function yesPress() {
   const audio = new Audio(fireworks)
   audio.currentTime = 0
   audio.volume = 0.5
-  audio.loop = true
   audio.play()
   setTimeout(() => {
     showYesCat.value = true
