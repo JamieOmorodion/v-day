@@ -14,6 +14,7 @@ const catImages = [
 
 const cats = ref([]) // each: { id, src, x, y }
 
+
 const spawnCat = () => {
   const randomSrc = catImages[Math.floor(Math.random() * catImages.length)]
 
@@ -64,7 +65,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="overflow-hidden relative h-screen">
+  <div class="overflow-hidden relative h-dvh">
     <div class="catBg absolute z-0 top-[-50%] left-[-50%]">
 
     </div>
@@ -78,7 +79,7 @@ onMounted(() => {
         alt=""
       />
     </div>
-    <div class="p-4 bg-transparent z-20 relative h-screen align-middle flex flex-col justify-center items-center">
+    <div class="p-4 bg-transparent z-20 relative h-dvh align-middle flex flex-col justify-center items-center">
       <h1 class="text-3xl font-bold bg-pink-300 p-4 rounded-lg border-2 border-white">
         Will you be my valentine? :D
       </h1>
