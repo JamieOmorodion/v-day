@@ -61,14 +61,20 @@ h1 {
   animation: catFade 1s ease-out forwards;
 }
 
-.yes-cat {
+.yes-cat-wrap {
   position: fixed;
   top: 40%;
   left: 50%;
-  width: 100px;
-  transform: translate(-50%, -50%);
-  animation: catSpinGrow 2s ease-out forwards;
+  transform: translate(-50%, -50%); /* centering stays constant */
   z-index: 40;
+  pointer-events: none;
+}
+
+.yes-cat-img {
+  width: 100px;
+  display: block;
+  animation: catSpinGrow 2s ease-out forwards;
+  will-change: transform;
 }
 
 
@@ -106,10 +112,6 @@ h1 {
 
 
 @keyframes catSpinGrow {
-  from {
-    transform: translate(-50%, -40%) scale(0) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -40%) scale(3) rotate(720deg);
-  }
+  from { transform: scale(0) rotate(0deg); }
+  to   { transform: scale(3) rotate(720deg); }
 }

@@ -97,11 +97,9 @@ onMounted(() => {
 <template>
   <div class="overflow-hidden relative h-dvh">
     <div v-show="yesPressed" class="fireworks">
-      <img
-        v-if="showYesCat"
-        :src="yesCat"
-        class="yes-cat"
-      />
+      <div v-if="showYesCat" class="yes-cat-wrap">
+  <img :src="yesCat" class="yes-cat-img" alt="" />
+</div>
       <p v-if="showYesText"
       class="w-5/6 text-xl font-bold bg-pink-300 p-4 rounded-lg border-2 border-white fixed bottom-4 left-1/2 transform -translate-x-1/2 z-40 text-center">
         Wow! You clicked YES on the first try!</br>
